@@ -1,5 +1,5 @@
 {
-  "name": "flight-app1",
+  "name": "flight-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-architects/paper-design": "^1.0.4",
     "@angular/animations": "^18.2.0",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
