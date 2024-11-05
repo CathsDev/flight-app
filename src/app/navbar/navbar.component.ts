@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @Component({
-    selector: 'app-navbar-cmp',
+    selector: 'navbar-cmp',
     templateUrl: 'navbar.component.html'
 })
 export class NavbarComponent {

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
-    selector: 'app-sidebar-cmp',
+    selector: 'sidebar-cmp',
     templateUrl: 'sidebar.component.html',
 })
 export class SidebarComponent {
