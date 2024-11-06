@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { FlightCardComponent } from './flight-card/flight-card.component';
+import { DateComponent } from './date/date.component';
 
 @NgModule({
     imports: [
@@ -21,6 +22,7 @@ import { FlightCardComponent } from './flight-card/flight-card.component';
         NavbarComponent,
         FlightSearchComponent,
         FlightCardComponent,
+        DateComponent,
     ],
     providers: [],
     bootstrap: [
