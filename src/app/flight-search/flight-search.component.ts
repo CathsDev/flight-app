@@ -11,6 +11,7 @@ export class FlightSearchComponent implements OnInit {
 
     from = 'Hamburg';
     to = 'Graz';
+    date: string = (new Date()).toISOString();
     flights: Array<Flight> = [];
     selectedFlight: Flight | null = null;
     basket: {[key: number]: boolean} = {
