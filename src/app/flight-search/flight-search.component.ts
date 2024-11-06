@@ -13,6 +13,10 @@ export class FlightSearchComponent implements OnInit {
     to = 'Graz';
     flights: Array<Flight> = [];
     selectedFlight: Flight | null = null;
+    basket: {[key: number]: boolean} = {
+        3: true,
+        5: true
+    };
 
     constructor(private http: HttpClient) {
     }
