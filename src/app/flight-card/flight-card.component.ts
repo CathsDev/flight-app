@@ -12,22 +12,18 @@ export class FlightCardComponent implements OnChanges, OnInit{
     @Output() selectedChange = new EventEmitter<boolean>();
 
     constructor() {
-        console.debug('constuctor', this.item);
     }
 
     ngOnInit(): void {
-        this.selectedChange.next(true);
-        console.debug('ngOnInit', this.item);
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        console.debug('ngOnChanges', this.item);
 
         if (changes.item) {
-            console.debug('ngOnChanges: item');
+            console.log('ngOnChanges: item');
         }
         if (changes.selected) {
-            console.debug('ngOnChanges: selected');
+            console.log('ngOnChanges: selected');
         }
     }
 

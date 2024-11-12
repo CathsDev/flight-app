@@ -1,36 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { FlightService } from '../flight.service';
+import { DummyFlightService } from '../dummy-flight.service';
 import { Flight } from '../flight';
 
 @Component({
-  selector: 'app-flight-search',
-  templateUrl: './flight-search.component.html',
-  styleUrls: ['./flight-search.component.scss']
+    selector: 'app-flight-search',
+    templateUrl: './flight-search.component.html',
+    styleUrls: ['./flight-search.component.scss'],
+    providers: [
+        {
+            provide: FlightService,
+            useClass: DummyFlightService,
+        }
+    ]
 })
 export class FlightSearchComponent implements OnInit {
 
     from = 'Hamburg';
     to = 'Graz';
-    date: string = (new Date()).toISOString();
     flights: Array<Flight> = [];
     selectedFlight: Flight | null = null;
-    basket: {[key: number]: boolean} = {
+    basket: { [key: number]: boolean } = {
         3: true,
         5: true
     };
 
-    constructor(private http: HttpClient) {
+    constructor(private flightService: FlightService) {
     }
 
     ngOnInit(): void {
     }
 
     search(): void {
-        const url = 'http://demo.ANGULARarchitects.io/api/flight';
-        const headers = new HttpHeaders().set('Accept', 'application/json');
-        const params = new HttpParams().set('from', this.from).set('to', this.to);
-
-        this.http.get<Flight[]>(url, {headers, params}).subscribe({
+        this.flightService.find(this.from, this.to).subscribe({
             next: (flights) => {
                 this.flights = flights;
             },

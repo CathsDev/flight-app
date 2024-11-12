@@ -4,10 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { FlightCardComponent } from './flight-card/flight-card.component';
+import { FlightService } from './flight.service';
+import { flightServiceObject } from './flight-service-object';
+import { createFlightServive } from './flight-service.factory';
 import { DateComponent } from './date/date.component';
 
 @NgModule({
@@ -24,7 +27,13 @@ import { DateComponent } from './date/date.component';
         FlightCardComponent,
         DateComponent,
     ],
-    providers: [],
+    providers: [
+        {
+            provide: FlightService,
+            useFactory: createFlightServive,
+            deps: [HttpClient]
+        }
+    ],
     bootstrap: [
         AppComponent,
     ]
