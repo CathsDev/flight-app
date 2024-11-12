@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Flight } from './flight';
-import { DummyFlightService } from './dummy-flight.service';
+import { DefaultFlightService } from './default-flight.service';
 
 @Injectable({
     providedIn: 'root',
-    useExisting: DummyFlightService
+    useExisting: DefaultFlightService
 })
 
 export abstract class FlightService {
