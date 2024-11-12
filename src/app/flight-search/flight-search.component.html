@@ -8,11 +8,6 @@
     <input class="form-control" [(ngModel)]="to">
 </div>
 <div class="form-group">
-    <label>Date:</label>
-    <app-date [(date)]="date"></app-date>
-    {{ date }}
-</div>
-<div class="form-group">
     <button class="btn btn-default" (click)="search()" [disabled]="!from || !to">
         Search
     </button>
