@@ -1,18 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightService } from '../flight.service';
-import { DummyFlightService } from '../dummy-flight.service';
 import { Flight } from '../flight';
 
 @Component({
     selector: 'app-flight-search',
     templateUrl: './flight-search.component.html',
-    styleUrls: ['./flight-search.component.scss'],
-    providers: [
-        {
-            provide: FlightService,
-            useClass: DummyFlightService,
-        }
-    ]
+    styleUrls: ['./flight-search.component.scss']
 })
 export class FlightSearchComponent implements OnInit {
 
@@ -20,6 +13,8 @@ export class FlightSearchComponent implements OnInit {
     to = 'Graz';
     flights: Array<Flight> = [];
     selectedFlight: Flight | null = null;
+    delayFilter: false | undefined;
+
     basket: { [key: number]: boolean } = {
         3: true,
         5: true
