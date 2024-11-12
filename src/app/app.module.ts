@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { FlightCardComponent } from './flight-card/flight-card.component';
 import { DateComponent } from './date/date.component';
+import { CityPipe } from './city.pipe';
+import { StatusFilterPipe } from './status-filter.pipe';
+import { StatusColorPipe } from './status-color.pipe';
 
 @NgModule({
     imports: [
@@ -23,6 +26,9 @@ import { DateComponent } from './date/date.component';
         FlightSearchComponent,
         FlightCardComponent,
         DateComponent,
+        CityPipe,
+        StatusFilterPipe,
+        StatusColorPipe
     ],
     providers: [],
     bootstrap: [
