@@ -1,17 +1,18 @@
 <div class="wrapper">
 
-  <div class="sidebar" data-color="white" data-active-color="danger">
-      <sidebar-cmp></sidebar-cmp>
-  </div>
+    <div class="sidebar" data-color="white" data-active-color="danger">
+        <sidebar-cmp></sidebar-cmp>
+    </div>
 
-  <div class="main-panel">
-      <navbar-cmp></navbar-cmp>
+    <div class="main-panel">
+        <navbar-cmp></navbar-cmp>
 
-      <div class="content">
-           
-          <app-flight-search></app-flight-search>
-          
-      </div>
-  </div>
+        <div class="content">
+
+            <router-outlet></router-outlet>
+            <router-outlet name="aux"></router-outlet>
+
+        </div>
+    </div>
 
 </div>
