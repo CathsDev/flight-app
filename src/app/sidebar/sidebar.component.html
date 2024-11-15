@@ -1,35 +1,29 @@
 <div class="sidebar-wrapper">
     <div class="logo">
-      <a href="http://angulararchitects.io" class="simple-text logo-mini">
-        <div class="logo-image-small">
-          <img src="assets/paper-design/angular2-logo.png">
-        </div>
-      </a>
-      <a href="http://angulararchitects.io" class="simple-text logo-normal">
-        Flights 42
-      </a>
+        <a href="http://angulararchitects.io" class="simple-text logo-mini">
+            <div class="logo-image-small">
+                <img src="assets/paper-design/angular2-logo.png">
+            </div>
+        </a>
+        <a href="http://angulararchitects.io" class="simple-text logo-normal">
+            Flights 42
+        </a>
     </div>
-      <ul class="nav">
-        <li class="active">
-            <a href="#" >
+    <ul class="nav">
+        <li routerLinkActive="active">
+            <a routerLink="home">
                 <p>Home</p>
             </a>
         </li>
 
-        <li>
-            <a>
-                <p>Flights</p>
-            </a>
-        </li>
-
-        <li>
-            <a>
-                <p>Passengers</p>
+        <li routerLinkActive="active">
+            <a routerLink="flight-booking" >
+                <p>Flight Booking</p>
             </a>
         </li>
 
         <li routerLinkActive="active">
-            <a>
+            <a [routerLink]="[{outlets: {aux: 'basket'}}]">
                 <p>Basket</p>
             </a>
         </li>
@@ -38,6 +32,11 @@
                 <p>Hide Basket</p>
             </a>
         </li>
-      </ul>
-  </div>
+        <li routerLinkActive="active">
+            <a routerLink="about">
+                <p>About</p>
+            </a>
+        </li>
+    </ul>
+</div>
   

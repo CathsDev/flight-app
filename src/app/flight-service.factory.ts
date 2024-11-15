@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { DefaultFlightService } from './default-flight.service';
-import { DummyFlightService } from './dummy-flight.service';
+import { DefaultFlightService } from './flight-booking/default-flight.service';
+import { DummyFlightService } from './flight-booking/dummy-flight.service';
 
 const DEBUG = false;
 
