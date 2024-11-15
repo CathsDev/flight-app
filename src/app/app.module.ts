@@ -19,7 +19,7 @@ import { BasketComponent } from './basket/basket.component';
         HttpClientModule,
         BrowserModule,
         FlightBookingModule,
-        RouterModule.forRoot(APP_ROUTES),
+        RouterModule.forRoot(APP_ROUTES, {useHash: true}),
     ],
     declarations: [
         AppComponent,

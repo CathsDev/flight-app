@@ -11,13 +11,40 @@
     </div>
     <ul class="nav">
         <li routerLinkActive="active">
-            <a routerLink="home">
+            <a href="#"
+               routerLink="home"
+               [queryParams]="{more: 42}"
+               queryParamsHandling="merge"
+               [preserveFragment]="true"
+            >
                 <p>Home</p>
             </a>
         </li>
 
         <li routerLinkActive="active">
-            <a routerLink="flight-booking" >
+            <a routerLink="flight-search"
+               [queryParams]="{more: 43}"
+               queryParamsHandling="merge"
+               [preserveFragment]="true"
+            >
+                <p>Flights</p>
+            </a>
+        </li>
+
+        <li routerLinkActive="active">
+            <a routerLink="passenger-search"
+               [queryParams]="{more: 44}"
+               queryParamsHandling="merge"
+               fragment="light-mode"
+            >
+                <p>Passengers</p>
+            </a>
+        </li>
+
+        <li routerLinkActive="active">
+            <a href="#"
+               routerLink="flight-booking"
+            >
                 <p>Flight Booking</p>
             </a>
         </li>
@@ -33,7 +60,11 @@
             </a>
         </li>
         <li routerLinkActive="active">
-            <a routerLink="about">
+            <a routerLink="about"
+               [queryParams]="{more: 45}"
+               queryParamsHandling="merge"
+               [preserveFragment]="true"
+            >
                 <p>About</p>
             </a>
         </li>
