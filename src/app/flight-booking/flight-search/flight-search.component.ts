@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightService } from '../flight.service';
 import { Flight } from '../flight';
+import { FlightClass } from '../flight-class';
+import {LuggageOption} from '../luggage-option';
 
 @Component({
     selector: 'app-flight-search',
@@ -14,6 +16,21 @@ export class FlightSearchComponent implements OnInit {
     flights: Array<Flight> = [];
     selectedFlight: Flight | null = null;
     delayFilter: false | undefined;
+    nonstop: false | undefined;
+
+    flightClasses: FlightClass[] = [
+        { id: 1, name: '1st Class' },
+        { id: 2, name: 'Business Class' },
+        { id: 3, name: 'Economy Class' }
+    ];
+    flightClass = this.flightClasses[2];
+
+    luggageOptions: LuggageOption[] = [
+        { id: 0, name: 'No luggage' },
+        { id: 1, name: '1 piece of luggage' },
+        { id: 2, name: '2 pieces of luggage' }
+    ];
+    luggage = this.luggageOptions[2];
 
     basket: { [key: number]: boolean } = {
         3: true,

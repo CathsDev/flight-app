@@ -9,6 +9,8 @@ import { FLIGHT_BOOKING_ROUTES } from './flight-booking.routes';
 import { FlightEditComponent } from './flight-edit/flight-edit.component';
 import { FlightBookingComponent } from './flight-booking.component';
 
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
@@ -19,8 +21,9 @@ import { FlightBookingComponent } from './flight-booking.component';
         FlightBookingComponent,
     ],
     imports: [
-        SharedModule,
         RouterModule.forChild(FLIGHT_BOOKING_ROUTES),
+        SharedModule,
+        FormsModule,
     ],
     exports: [
         FlightSearchComponent,
